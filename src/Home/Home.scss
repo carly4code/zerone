@@ -1,8 +1,149 @@
+.home {
+    
+        overflow-x: hidden;
+
+}
+
+.row {
+    margin: 0;
+}
+
+.img-container {
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
 .hero {
     width: 100vw;
     height: 100vh;
-    .img-container {
-        width: 100%;
-        height: 85%;
+    margin: 0 !important;
+    padding-top: 6%;
+    align-items: end;
+    position: relative;
+    overflow: hidden;
+    h1 {
+        position: absolute;
+        width: auto;
+        font-weight: 700;
+        font-size: 7vw;
+        text-transform: uppercase;
+        top: 10%;
+        left: 8.33333333%;
+    }
+    p {
+        position: absolute;
+        bottom: 10%;
+        left: 8.33333333%;
+        a {
+            color: darkgray;
+        }
+    }
+
+}
+
+h2 {
+    font-size: 6vw;
+    font-weight: 500;
+}
+
+span {
+    color: black;
+}
+
+.story {
+    padding-top: 5rem;
+    width: 100vw;
+    text-align: center;
+
+    div p {
+        font-size: 24px;
     }
 }
+
+.coffee {
+    text-align: center;
+    padding: 5rem 10%;
+    height: 85vh;
+    width: 100%;
+    position: relative;
+
+    // background-image: radial-gradient(#eb4d4b 3px, transparent 3px);
+    // background-size: 20px 20px;
+    .pattern {
+        position: absolute;
+
+        background-image: radial-gradient(#CC2840 0.5vw, transparent 0.5vw);
+        height: 20vw;
+        background-size: 3vw 3vw;
+        &:first-child {
+            width: 25vw;
+            bottom: 5%;
+            left: 0;
+        }
+        &:nth-child(2) {
+            width: 32.5vw;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    }
+    .img-container {
+
+        z-index: 1;
+
+        
+    }
+}
+
+
+.awards {
+    margin: 10rem 0;
+    padding: 0 10%;
+    height: 80vh;
+    .col-8 {
+        padding-right: 10%;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    h2 {
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 24px;
+    }
+}
+
+.ig {
+    margin: 10rem 0;
+
+    h2 {
+        text-align: center;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    .feeds-slide {
+        padding-left: 10%;
+        display: flex;
+        justify-content: space-between;
+        margin: 5rem 0;
+        .img-container {
+            margin-top: 0.5rem;
+            width: 280px;
+            height: 280px;
+        }
+    }
+    p {
+        padding-left: 10%;
+
+    }
+}
+
