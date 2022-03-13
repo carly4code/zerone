@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Navbar } from "react-bootstrap";
+import { Row, Container, Navbar } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./header.css";
@@ -8,12 +8,12 @@ function Header() {
   return (
     <header>
       <Navbar expand="lg">
-        <Container fluid style={{ padding: "0" }}>
+        <div className="w-100">
           <Navbar.Collapse
-            className="justify-content-center"
-            style={{ padding: "2rem 0" }}
+            className="w-100"
+            style={{ padding: "2rem 0", justifyContent: "space-between" }}
           >
-            <Container className="content">
+            <div className="content">
               <Navbar.Brand href="#home">
                 <svg
                   width="108"
@@ -50,17 +50,17 @@ function Header() {
                 </svg>
               </Navbar.Brand>
               <Navbar.Toggle />
-            </Container>
-            <Container className="content">
+            </div>
+            <div className="content">
               <Navbar.Text>
                 83 Wellington Street, Central, Hong Kong
               </Navbar.Text>
-            </Container>
-            <Container className="content">
+            </div>
+            <div className="content">
               <Navbar.Text>Mon - Fri | 07:30 - 19:00</Navbar.Text>　
               <Navbar.Text>Sat - Sun | 08:30 - 19:00</Navbar.Text>
-            </Container>
-            <Container className="content">
+            </div>
+            <div className="content">
               <Navbar.Brand href="#">
                 <svg
                   width="5"
@@ -89,9 +89,9 @@ function Header() {
                   />
                 </svg>
               </Navbar.Brand>
-            </Container>
+            </div>
           </Navbar.Collapse>
-        </Container>
+        </div>
       </Navbar>{" "}
     </header>
   );
