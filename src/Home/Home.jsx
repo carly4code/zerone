@@ -68,7 +68,7 @@ export default function Home (){
                     <p>
                         Did you know every cup of coffee is an award-winning one at Zero One? <br />
                         Our “One” Espresso House Blend won a bronze medal at the 2019 Australian International Coffee Awards, you will be surprised when it’s topped with frothed milk. <br />
-                        <a href="#">Make your own award coffee</a>
+                        <a href="#">Brew your own awarded coffee</a>
                     </p>
                 </div>
                 <div className="col-4 img-container">
