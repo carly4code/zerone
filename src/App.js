@@ -1,14 +1,17 @@
 import logo from './logo.svg';
-import './App.css';
-// import Infinity from './Components/Infinity.js';
+
+import './App.scss';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Home from './Home/Home'
+
+// import { Route, Link } from 'react-router-dom'
 
 function App() {
   return (
-    <div>
-     <svg viewBox= "-2000 -1000 4000 2000">
-        <path id="stroke" d="M354-354A500 500 0 1 1 354 354L 354L-354A500 500 0 1 0-354 354z"></path>
-        <use xlink:href="#stroke" stroke-dasharray="1570 5143" stroke-dashoffset= "6713px"></use>
-      </svg>
+    <div className="App">
+      <Home/ >
     </div>
   );
 }

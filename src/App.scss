@@ -1,0 +1,14 @@
+@import './styles/_fonts.scss';
+
+* {
+    font-family: $Outfit;
+}
+
+::selection {
+    color: white;
+    background: $red;
+  }
+
+h1, h2 {
+    @extend %title;
+}
