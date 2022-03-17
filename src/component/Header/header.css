@@ -1,8 +1,25 @@
-.header {
+/* header {
   height: 84px;
   width: 100%;
   padding: 1rem 0;
+} */
+
+header {
+  height: 84px;
+  width: 100%;
+  /* padding: 1rem 0; */
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background: white;
 }
+
+header div {
+  /* mix-blend-mode: difference; */
+  font-weight: 400;
+
+}
+
 .Navbar.Collapse {
   justify-content: space-between;
 }
