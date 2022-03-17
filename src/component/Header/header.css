@@ -1,0 +1,15 @@
+.header {
+  height: 84px;
+  width: 100%;
+  padding: 1rem 0;
+}
+.Navbar.Collapse {
+  justify-content: space-between;
+}
+.content {
+  font-family: "Outfit", sans-serif;
+  font-size: 9px;
+  font-weight: 200;
+  line-height: 11px;
+  padding: 0 3rem;
+}
