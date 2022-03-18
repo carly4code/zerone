@@ -12,3 +12,48 @@
 h1, h2 {
     @extend %title;
 }
+
+h3 {
+    font-size: 4vw;
+    color: $red;
+}
+
+
+
+
+
+
+
+
+
+
+.footer {
+    height: 20vh;
+    padding-left: 8.33333333%;
+    .logo { 
+        min-width: 184px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        height: 100%;
+        padding: 0;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .top-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        svg {
+            height: 5vw;
+            min-height: 36px;
+        }
+        p {
+            margin: 0.5rem 0;
+            font-size: 1.5vw;
+        }
+    }
+}
