@@ -1,8 +1,8 @@
 import React from "react";
-import { Row, Container, Navbar } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import "./header.css";
+import "./header.scss";
 
 function Header() {
   return (
@@ -10,7 +10,6 @@ function Header() {
       <Navbar expand="lg">
         <div className="w-100">
           <Navbar.Collapse
-            className="w-100"
             style={{ padding: "2rem 0", justifyContent: "space-between" }}
           >
             <div className="content">

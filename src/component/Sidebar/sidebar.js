@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
 
-import "./sidebar.css";
+import "./sidebar.scss";
 
 function Sidebar() {
   return (

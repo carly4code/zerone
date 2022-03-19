@@ -1,0 +1,28 @@
+@mixin alignItemcenter {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  height: 84px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+  align-items: center;
+  div {
+    /* mix-blend-mode: difference; */
+    font-weight: 400;
+  }
+}
+
+.w-100 {
+  @include alignItemcenter();
+  .content {
+    padding: 0 3rem;
+    font-size: 9px;
+    font-weight: 200;
+    line-height: 11px;
+  }
+}
