@@ -1,10 +1,20 @@
 import React from 'react';
 import './Home.scss';
+import hero from '../assets/images/Home/hero.jpg';
+import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, Move, MoveIn, MoveOut, Sticky, StickyIn, ZoomIn } from "react-scroll-motion";
+import IGapi from '../IGapi/IGapi';
 import Footer from '../Footer';
 
-import hero from '../assets/images/Home/hero.jpg';
+
 
 export default function Home (){
+
+const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
+const FadeUp = batch(Fade(), Move(), Sticky());
+
+
+
+
 
     return(
         <div className='home'>
@@ -86,7 +96,7 @@ export default function Home (){
                 {/* insta-feeds */}
                 <div className='row feeds-slide'>
                     <div className="img-container">
-                        <img src={hero} alt="" />
+                    <IGapi />
                     </div>
                     <div className="img-container">
                         <img src={hero} alt="" />
@@ -116,6 +126,8 @@ export default function Home (){
 
                 </div>
             </section>
+
+            
 
             <Footer />
 
