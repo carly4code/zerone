@@ -127,8 +127,6 @@ const FadeUp = batch(Fade(), Move(), Sticky());
                 </div>
             </section>
 
-            
-
             <Footer />
 
         </div>
