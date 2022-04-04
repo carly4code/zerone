@@ -1,21 +1,36 @@
 import React from "react";
-import { Row, Container, Navbar } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { useState } from 'react';
 import "./header.css";
+import { Fade } from 'react-reveal';
+
 
 function Header() {
+   const [navbar, setNavbar] = useState(false);
+
+    const changeIogo = () => {
+      if (window.scrollY >= 1000) {
+        setNavbar(true);
+      } else {
+        setNavbar(false);
+      }
+    };
+    
+    window.addEventListener('scroll', changeIogo);
+
   return (
+    <Fade top>
     <header>
-      <Navbar expand="lg">
+      <Navbar expand="lg" className="d-flex align-items-center">
         <div className="w-100">
           <Navbar.Collapse
-            className="w-100"
-            style={{ padding: "2rem 0", justifyContent: "space-between" }}
+            style={{ justifyContent: "space-between" }}
           >
             <div className="content">
               <Navbar.Brand href="#home">
-                <svg
+                  <div className={navbar ? 'logo1' : 'logo2'}></div>
+                {/* <svg
                   width="108"
                   height="18"
                   viewBox="0 0 108 18"
@@ -47,7 +62,7 @@ function Header() {
                     d="M4.87731 13.7936C7.66251 13.7936 10.3312 13.7936 12.9999 13.7936C13.4871 13.7936 13.6247 13.91 13.593 14.386C13.5506 15.0023 13.5506 15.6208 13.593 16.2371C13.593 16.6708 13.4871 16.766 13.0529 16.766H1.54142C1.14959 16.766 0.757758 16.766 0.365924 16.766C-0.0259104 16.766 0.0376284 16.6814 0.0164482 16.4169C-0.0657041 15.6257 0.16201 14.8334 0.651854 14.2062C3.15112 10.7895 5.59744 7.31996 8.06494 3.87157C8.17084 3.72348 8.26615 3.57539 8.41441 3.34267H4.87731C3.74417 3.34267 2.61103 3.34267 1.48847 3.34267C1.16018 3.34267 1.01192 3.34267 1.02251 2.91956C1.02251 2.21436 1.02251 1.50917 1.02251 0.803978C1.02251 0.465486 1.14959 0.412598 1.44611 0.412598H12.8834C13.2541 0.412598 13.2965 0.539533 13.3176 0.867447C13.3646 1.56028 13.1533 2.24598 12.7246 2.79262C10.1724 6.30448 7.66251 9.85865 5.14207 13.3705L4.87731 13.7936Z"
                     fill="#070706"
                   />
-                </svg>
+                </svg> */}
               </Navbar.Brand>
               <Navbar.Toggle />
             </div>
@@ -94,6 +109,7 @@ function Header() {
         </div>
       </Navbar>{" "}
     </header>
+    </Fade>
   );
 }
 
