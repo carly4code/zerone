@@ -1,0 +1,55 @@
+/* header {
+  height: 84px;
+  width: 100%;
+  padding: 1rem 0;
+} */
+
+header {
+  height: 80px;
+  width: 100%;
+  /* padding: 1rem 0; */
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background: rgb(255, 255, 255);
+  align-items: center;
+}
+
+header div {
+  /* mix-blend-mode: difference; */
+  font-weight: 400;
+
+}
+
+.Navbar.Collapse {
+  justify-content: space-between;
+}
+.content {
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  font-weight: 200;
+  /* line-height: 11px; */
+  padding: 10px;
+  margin: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+div .logo1 {
+  width: 100px;
+  height: auto;
+  padding-left: 10px;
+  content: url("./logo1.png");
+}
+
+div .logo2 {
+  width: 100px;
+  height: auto;
+  padding-left: 10px;
+  content: url("./logo2.png") ;
+}
+
+.navbar {
+  padding: 0;
+}
