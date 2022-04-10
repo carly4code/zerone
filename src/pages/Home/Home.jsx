@@ -1,9 +1,10 @@
 import React from 'react';
 import './Home.scss';
-import hero from '../assets/images/Home/hero.jpg';
+import hero from '../../assets/images/Home/hero.jpg';
 // import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, Move, MoveIn, MoveOut, Sticky, StickyIn, ZoomIn } from "react-scroll-motion";
-import IGapi from '../IGapi/IGapi';
-import Footer from '../Footer';
+import IGapi from '../../IGapi/IGapi';
+import Footer from '../../Footer';
+import Meun from '../Meun/Meun';
 
 import { Fade, Rotate, Bounce, Slide, Roll } from 'react-reveal';
 
@@ -110,6 +111,7 @@ export default function Home (){
                 </div>
             </section>
             
+
             <section className='ig'>
                 <h2>Latest Feeds</h2>
                 {/* insta-feeds */}
@@ -145,6 +147,7 @@ export default function Home (){
 
                 </div>
             </section>
+
 
             <Footer />
 
