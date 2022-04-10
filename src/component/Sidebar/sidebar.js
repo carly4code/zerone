@@ -20,6 +20,9 @@ function Sidebar() {
               <Link to="/Access" activeclassname="active" id="items">
                 Access
               </Link>
+              <Link to="/Meun" activeclassname="active" id="items">
+                Meun
+              </Link>
               {/* <Nav.Link id="items" href="#home">
                 Home
               </Nav.Link>
