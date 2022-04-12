@@ -3,14 +3,13 @@ import { Container, Navbar, Nav } from "react-bootstrap";
 
 import "./sidebar.scss";
 import { Link } from 'react-router-dom';
-import "./sidebar.css";
 import Fade from 'react-reveal/Fade';
 
 function Sidebar() {
   return (
     <Fade left>
       <Navbar expand="lg" id="side-nav">
-        <Container>
+        <Container class="inner-item">
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="meun">
