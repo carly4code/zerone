@@ -1,8 +1,51 @@
 import React from 'react';
 import './Home.scss';
 import Footer from '../Footer';
+import $ from 'jquery';
 
 import hero from '../assets/images/Home/hero.jpg';
+import milk from '../assets/images/Home/milk.jpeg';
+
+
+
+
+
+    $(document).ready(() => {
+        let scroll = $(window).scrollTop();
+        console.log(scroll)
+        if(scroll > 636) {
+            $(".coffee .img-container img").css({  
+                transition: 'none',  
+                transform: `translateX(-50%) scale(${ 1 + scroll / 1500}, ${1+ scroll / 1500})`
+            })
+        }
+
+        $(window).scroll(() => {
+            let scroll = $(window).scrollTop();
+            console.log(scroll)
+
+            if(scroll > 636) {
+                $(".coffee .img-container img").css({
+                    transition: '0.3s ease-out',
+                    transform: `translateX(-50%) scale(${ 1 + scroll / 1500}, ${1+ scroll / 1500})`
+                    // height: (100 + scroll/5) + "%"
+                })
+            }
+
+            if(scroll > 1500) {
+                $(".coffee .img-container img").css({
+                
+                    transform: `translateX(-50%) scale(${ 2}, ${2})`
+                    // height: (100 + scroll/5) + "%"
+                })
+            }
+            
+
+        })        
+    })
+
+
+
 
 export default function Home (){
 
@@ -45,7 +88,7 @@ export default function Home (){
                 <div className="pattern"></div>
                 <div className="pattern"></div>
             <div className="col-3 img-container">
-                    <img src={hero} alt="hero"/>
+                    <img src={milk} alt="hero"/>
             </div>
             <div className='col-6 my-auto'>
                 <h2>
@@ -56,7 +99,6 @@ export default function Home (){
                 </h2>
             </div>
             <div className="col-3 img-container">
-               
                     <img src={hero} alt="hero"/>
                 </div>
 

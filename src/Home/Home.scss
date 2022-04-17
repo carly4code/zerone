@@ -94,9 +94,20 @@ span {
         }
     }
     .img-container {
-
+        display: flex;
         z-index: 1;
-
+        position: relative;
+        img {
+            object-fit: cover;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+            transition: 0.2s ease-out;
+            // width: 100%;
+            // height: auto;
+            // width: auto;
+        }
         
     }
 }
