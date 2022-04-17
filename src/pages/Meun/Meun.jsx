@@ -19,15 +19,15 @@ export default function Meun() {
 
 
     return (
-        <div>
-            <section className='top-bar'>
+        <div style={{paddingLeft: 40}}>
+            <section className='top-bar w-100 overflow-hidden'>
                 <div className="container position-relative">
-                    <div className='title position-absolute'>
+                    <div className='position-absolute'>
                         <h1>
                             Meun
                         </h1>
                     </div>
-                    <div className='offset-2 meun-img'>
+                    <div className='meun-img offset-2 overflow-hidden'>
                         <img src={meun_head} alt='meun-img' />
                     </div>
                 </div>
@@ -38,46 +38,7 @@ export default function Meun() {
                     <h1>Drink</h1>
                     <hr />
                 </div>
-
-                {/* meun with table */}
-                <div className='container'>
-                    <div>
-                        <Table className='table-borderless' responsive="lg">
-                            <thead>
-                                <tr>
-                                    <th>Table heading</th>
-                                    <th>Table heading</th>
-                                    <th>Table heading</th>
-
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                </tr>
-                                <tr>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </Table>
-                    </div>
-                </div>
-
-                {/* meun with collum */}
-                <div class="container meun-table" style={{display: "flex", justifyContent: "space-between"}}>
+                <div class="container meun-table">
                         <div>
                            <div class="table-head">Coffee</div> 
                            <div class="table-body">Espresso</div>
@@ -105,6 +66,46 @@ export default function Meun() {
                            <div class="table-body">Peppermint</div>
                         </div>
                 </div>
+
+                <div className='container'>
+                    <h1>Pour over</h1>
+                    <p style={{color:"#787777"}}>Single origin hand drip coffee</p>
+                    <hr />
+                </div>
+
+                <div class="container meun-table">
+                        <div>
+                           <div class="table-body">Ethiopia Guji D-Minor Natural</div>
+                           <div class="table-body">Ethiopia Sidama Bensa Washed G1 74158</div>
+                           <div class="table-body">Colombia Cauca Finca El Paraiso Double Anaerobic Flor Lichi</div>
+                           <div class="table-body">Costa Rica Brunca Rivense Tres Piedras Black Honey</div>
+                           <div class="table-body">Brazil Sun De Minas Sao Jose Anaerobic-Cima</div>
+                           <div class="table-body">Brazil Sun De Minas Sao Jose Anaerobic-Cima Brazil Sun De Minas Sao Jose Anaerobic-Cima Brazil Sun De Minas Sao Jose Anaerobic-Cima</div>
+
+                        </div>
+                </div>
+
+                <div className='container'>
+                    <h1>Food</h1>
+                    <p style={{color:"#787777"}}>Food subtitle</p>
+                    <hr />
+                </div>
+                <div class="container meun-table">
+                        <div>
+                           <div class="table-head">Scone</div> 
+                        </div>
+                        <div>
+                           <div class="table-head">Brunch</div> 
+                           <div class="table-body">Slow cook chicken  breast w/ salad
+                           <p style={{color:"#787777"}}>there is some description of the food: IBERICO HAM TOAST + cream cheese + sourdough + pesto</p>
+                           </div> 
+                           <div class="table-body">Egg Benedict w/ salmon</div>
+                           <div class="table-body">Coconut Milk Chia Seed Bowl</div>
+                           <div class="table-body">Smashed Avocado Toast</div>
+                           <div class="table-body">Iberico Ham Toast</div>
+                           <div class="table-body">Smoked Salmon Toast</div>
+                        </div>
+                        </div>
 
             </section>
         </div>

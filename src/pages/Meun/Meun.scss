@@ -1,25 +1,14 @@
 .top-bar{
-    width: 100%;
-    padding-top: 6%;
-    padding-bottom: 5%;
-    // align-items: end;
-    overflow: hidden;
-
+     padding-top: 6%;
+     padding-bottom: 5%;
 
 h1 {
-    // position: absolute;
-    width: auto;
     font-weight: 500;
     font-size: 5vw;
-    text-transform: uppercase;
-    // top: 10%;
-    // left: 8.33333333%;
 }
 }
 
 .meun-img {
-    overflow: hidden;
-    padding: 2;
     height: 10rem;
     width: 100%;
     img {
@@ -29,16 +18,24 @@ h1 {
     }
 }
 
+
+.meun-table{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    padding-bottom:7rem;
+}
 .table-head{
 font-size: 20px;
 font-weight: 600;
-padding: 1rem
+padding: 1rem;
 }
 
 .table-body{
     font-size: 16px;
     font-weight: 400;    
-    padding: 1rem
+    padding: 1rem;
+    max-width: 70%;
 }
 
 

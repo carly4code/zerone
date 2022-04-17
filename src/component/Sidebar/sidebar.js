@@ -9,17 +9,17 @@ function Sidebar() {
   return (
     <Fade left>
       <Navbar expand="lg" id="side-nav">
-        <Container class="inner-item">
+        <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="meun">
-              <Link to="/" activeclassname="active" id="items">
+          <Navbar.Collapse>
+            <Nav>
+              <Link to="/" activeclassname="active">
                 Home
               </Link>
-              <Link to="/Access" activeclassname="active" id="items">
+              <Link to="/Access" activeclassname="active">
                 Access
               </Link>
-              <Link to="/Meun" activeclassname="active" id="items">
+              <Link to="/Meun" activeclassname="active">
                 Meun
               </Link>
               {/* <Nav.Link id="items" href="#home">
