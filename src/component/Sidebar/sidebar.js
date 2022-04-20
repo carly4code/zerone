@@ -9,7 +9,6 @@ function Sidebar() {
   return (
     <Fade left>
       <Navbar expand="lg" id="side-nav">
-        <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse>
             <Nav>
@@ -33,7 +32,6 @@ function Sidebar() {
               </Nav.Link> */}
             </Nav>
           </Navbar.Collapse>
-        </Container>
       </Navbar>
     </Fade>
   );
