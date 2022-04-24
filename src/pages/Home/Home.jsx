@@ -1,53 +1,5 @@
 import React from 'react';
 import './Home.scss';
-<<<<<<< HEAD:src/Home/Home.jsx
-import Footer from '../Footer';
-import $ from 'jquery';
-
-import hero from '../assets/images/Home/hero.jpg';
-import milk from '../assets/images/Home/milk.jpeg';
-
-
-
-
-
-    $(document).ready(() => {
-        let scroll = $(window).scrollTop();
-        console.log(scroll)
-        if(scroll > 636) {
-            $(".coffee .img-container img").css({  
-                transition: 'none',  
-                transform: `translateX(-50%) scale(${ 1 + scroll / 1500}, ${1+ scroll / 1500})`
-            })
-        }
-
-        $(window).scroll(() => {
-            let scroll = $(window).scrollTop();
-            console.log(scroll)
-
-            if(scroll > 636) {
-                $(".coffee .img-container img").css({
-                    transition: '0.3s ease-out',
-                    transform: `translateX(-50%) scale(${ 1 + scroll / 1500}, ${1+ scroll / 1500})`
-                    // height: (100 + scroll/5) + "%"
-                })
-            }
-
-            if(scroll > 1500) {
-                $(".coffee .img-container img").css({
-                
-                    transform: `translateX(-50%) scale(${ 2}, ${2})`
-                    // height: (100 + scroll/5) + "%"
-                })
-            }
-            
-
-        })        
-    })
-
-
-
-=======
 import hero from '../../assets/images/Home/hero.jpg';
 // import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, Move, MoveIn, MoveOut, Sticky, StickyIn, ZoomIn } from "react-scroll-motion";
 import IGapi from '../../IGapi/IGapi';
@@ -55,7 +7,6 @@ import Footer from '../../Footer';
 import Meun from '../Meun/Meun';
 
 import { Fade, Rotate, Bounce, Slide, Roll } from 'react-reveal';
->>>>>>> 7bfc530cdbae1d8706233723c03339794221adae:src/pages/Home/Home.jsx
 
 export default function Home (){
 
@@ -130,11 +81,7 @@ export default function Home (){
             </div>
                     
             <div className="col-3 img-container">
-<<<<<<< HEAD:src/Home/Home.jsx
-                    <img src={hero} alt="hero"/>
-=======
                         <img src={hero} alt="hero"/>
->>>>>>> 7bfc530cdbae1d8706233723c03339794221adae:src/pages/Home/Home.jsx
                 </div>
             </section>
 
