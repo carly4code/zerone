@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
 
-import "./sidebar.scss";
+import "./styles/Sidebar.scss";
 import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 

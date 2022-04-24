@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Infinity from '../Loading/Infinity.gif';
-import '../Loading/Loading.css';
+import './Loading.css';
 
 class Loading extends Component {
 

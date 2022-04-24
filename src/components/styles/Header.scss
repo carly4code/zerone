@@ -30,12 +30,12 @@ header {
 
   .logo1 {
     @include logoStyle();
-    content: url("./logo1.png");
+    content: url("../../assets/images/logo_simple.png");
   }
   
   .logo2 {
     @include logoStyle();
-    content: url("./logo2.png") ;
+    content: url("../../assets/images/logo_full.png") ;
   }
 }
 

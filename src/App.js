@@ -1,13 +1,13 @@
 // import logo from './logo.svg';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './pages/Home/Home';
-import Access from './pages/Access/Access';
-import Meun from './pages/Meun/Meun';
+import Home from './pages/Home';
+import Access from './pages/Access';
+import Meun from './pages/Meun';
 // import { Routes, Route } from 'react-router';
-import Header from "./component/Header/header";
-import Sidebar from "./component/Sidebar/sidebar";
-import Infinity from './Loading/Infinity.gif';
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import Infinity from './elements/styles/Infinity.gif';
 import React, { useState, useEffect } from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 

@@ -2,11 +2,9 @@ import React from "react";
 import { Navbar } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import "./header.scss";
+import "./styles/Header.scss"
 import { useState } from 'react';
-// import "./header.css";
 import { Fade } from 'react-reveal';
-
 
 function Header() {
    const [navbar, setNavbar] = useState(false);

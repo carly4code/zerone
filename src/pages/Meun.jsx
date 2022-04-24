@@ -1,7 +1,7 @@
 import React from 'react';
-import meun_head from '../../assets/images/Meun/meun_head.jpeg';
+import meun_head from '../assets/images/Meun/meun_head.jpeg';
 import { Table } from "react-bootstrap";
-import "./Meun.scss";
+import "./styles/Meun.scss";
 
 
 

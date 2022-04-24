@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './assets/images/Logo/zeroone_logo.png';
-import BackToTopBTN from './element/BackToTopBtn'
+import logo from '../assets/images/Logo/zeroone_logo.png';
+import Btn_top from '../elements/Btn_top'
 
 export default function Footer (){
 
@@ -9,7 +9,7 @@ export default function Footer (){
             <div className="col-4 logo">
                 <img src={logo} alt="" />
             </div>
-           <BackToTopBTN />
+           <Btn_top />
         </div>
     )
 }
