@@ -1,0 +1,49 @@
+@mixin alignItemcenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin logoStyle{
+  width: 100px;
+    height: auto;
+    padding-left: 10px;
+}
+
+header {
+  height: 5.25rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+  padding-top: 5px;
+  // div {
+  //   /* mix-blend-mode: difference; */
+  //   font-weight: 400;
+  // }
+  .content {
+    font-size: 12px;
+    font-weight: 200;
+    padding: 0.5rem;
+  @include alignItemcenter;
+  }
+
+  .logo1 {
+    @include logoStyle();
+    content: url("./logo1.png");
+  }
+  
+  .logo2 {
+    @include logoStyle();
+    content: url("./logo2.png") ;
+  }
+}
+
+
+// .Navbar.Collapse {
+//   justify-content: space-between;
+// }
+
+
+
+
