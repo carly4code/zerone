@@ -19,7 +19,8 @@ export default function Meun() {
 
 
     return (
-        <div style={{paddingLeft: 40}}>
+
+        <div className="menu wrapper" style={{paddingLeft: 40}}>
             <section className='top-bar w-100 overflow-hidden'>
                 <div className="container position-relative">
                     <div className='position-absolute'>

@@ -50,21 +50,27 @@ import milk from '../assets/images/Home/milk.jpeg';
 export default function Home (){
 
     return(
-        <div className='home'>
+        <div className='home wrapper'>
             <section className='hero row'>
-                <h1>
-                    Coffee &<br />
-                    Roastery
-                </h1>
 
-                <p className='col-3'> 
-                    Established by and for coffee connoisseurs, 
-                    we use direct-roasting method to fully extract the distinct flavour profiles unique to their origins into your cup.<br />
-                    <a href='#'>FIND US</a>
-                </p>
+                <div className="hero-container">
+
+                    <h1>
+                        Coffee &<br />
+                        Roastery
+                    </h1>
+
+                    <p className='col-3'> 
+                        Established by and for coffee connoisseurs, 
+                        we use direct-roasting method to fully extract the distinct flavour profiles unique to their origins into your cup.<br />
+                        <a href='#'>FIND US</a>
+                    </p>
                     <div className="col-8 offset-4 img-container">
                         <img src={hero} alt="hero"/>
                     </div>
+                </div>
+
+
             </section>
 
             <section className='story row'>

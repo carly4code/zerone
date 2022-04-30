@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import './reset.css';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home';
@@ -10,6 +11,7 @@ import Sidebar from "./components/Sidebar";
 import Infinity from './elements/styles/Infinity.gif';
 import React, { useState, useEffect } from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
 
 function App() {
   const [loading, setLoading] = useState(false);
