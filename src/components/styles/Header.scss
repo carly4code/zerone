@@ -1,49 +1,41 @@
-@mixin alignItemcenter {
+@mixin alignItems{
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-@mixin logoStyle{
+@mixin logoStyle {
   width: 100px;
-    height: auto;
-    padding-left: 10px;
+  height: auto;
+  padding-left: 10px;
 }
 
-header {
-  height: 5.25rem;
-  width: 100%;
-  position: fixed;
+.top-header {
+  height: 4.5rem;
+  position: sticky;
   top: 0;
   z-index: 999;
   background-color: white;
-  padding-top: 5px;
-  // div {
-  //   /* mix-blend-mode: difference; */
-  //   font-weight: 400;
-  // }
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   .content {
     font-size: 12px;
     font-weight: 200;
     padding: 0.5rem;
-  @include alignItemcenter;
+    gap: 0.5rem;
+    @include alignItems()
   }
 
   .logo1 {
     @include logoStyle();
     content: url("../../assets/images/logo_simple.png");
   }
-  
+
   .logo2 {
     @include logoStyle();
-    content: url("../../assets/images/logo_full.png") ;
+    content: url("../../assets/images/logo_full.png");
   }
 }
-
-
-// .Navbar.Collapse {
-//   justify-content: space-between;
-// }
-
-
-
-

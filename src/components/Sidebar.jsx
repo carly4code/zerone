@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Navbar, Nav } from "react-bootstrap";
+// import { Navbar, Nav } from "react-bootstrap";
 
 import "./styles/Sidebar.scss";
 import { Link } from 'react-router-dom';
@@ -8,10 +8,10 @@ import Fade from 'react-reveal/Fade';
 function Sidebar() {
   return (
     <Fade left>
-      <Navbar expand="lg" id="side-nav">
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse>
-            <Nav>
+      <nav expand="lg" id="left-header" aria-controls="basic-navbar-nav">
+          {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
+          {/* <Navbar.Collapse> */}
+            <div className="navbar-left">
               <Link to="/" activeclassname="active">
                 Home
               </Link>
@@ -21,18 +21,9 @@ function Sidebar() {
               <Link to="/Meun" activeclassname="active">
                 Meun
               </Link>
-              {/* <Nav.Link id="items" href="#home">
-                Home
-              </Nav.Link>
-              <Nav.Link id="items" href="#link">
-                Link
-              </Nav.Link>
-              <Nav.Link id="items" href="#link">
-                Link
-              </Nav.Link> */}
-            </Nav>
-          </Navbar.Collapse>
-      </Navbar>
+            </div>
+          {/* </Navbar.Collapse> */}
+      </nav>
     </Fade>
   );
 }
