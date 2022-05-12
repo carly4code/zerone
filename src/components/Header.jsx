@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./styles/Header.scss"
 import { useState } from 'react';
@@ -22,7 +22,7 @@ function Header() {
   return (
     <Fade top>
     <header>
-      <Navbar expand="lg" className="d-flex align-items-center justify-content-between px-3 w-100">
+      <Navbar expand="lg" className="d-flex align-items-center justify-content-between">
           {/* <Navbar.Collapse> */}
             <div className="content">
               <Navbar.Brand href="#home">

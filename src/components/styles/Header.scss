@@ -16,11 +16,10 @@ header {
   top: 0;
   z-index: 999;
   background-color: white;
-  padding-top: 5px;
-  // div {
-  //   /* mix-blend-mode: difference; */
-  //   font-weight: 400;
-  // }
+  height: 70px;
+  nav {
+    height: 100%;
+  }
   .content {
     font-size: 12px;
     font-weight: 200;
