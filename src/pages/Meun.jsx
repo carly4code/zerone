@@ -32,16 +32,17 @@ export default function Meun() {
         <div className='meun-wrapper'>
             <div className="page-margin-wrapper">
                 <section className='top-column'>
-                    <div className='container'>
+
                         <div className='page-header overflow-hidden'>
+                            <img src={meun_head} alt='meun-img' />
+
                             <div className='page-heading'>
                                 <h1>
                                     Meun
                                 </h1>
                             </div>
-                            <img src={meun_head} alt='meun-img' />
                         </div>
-                    </div>
+
                 </section>
 
                 <section className='meun-bar'>
