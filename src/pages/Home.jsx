@@ -1,5 +1,4 @@
 import React from 'react';
-import './styles/Home.scss';
 import Footer from '../components/Footer';
 import $ from 'jquery';
 
@@ -9,7 +8,7 @@ import milk from '../assets/images/Home/milk.jpeg';
 
 
 
-
+    // img scroll function
     $(document).ready(() => {
         let scroll = $(window).scrollTop();
         console.log(scroll)
@@ -44,6 +43,31 @@ import milk from '../assets/images/Home/milk.jpeg';
         })        
     })
 
+    // fade-in function
+    $(document).ready(function() {
+    
+        /* Every time the window is scrolled ... */
+        $(window).scroll( function(){
+        
+            /* Check the location of each desired element */
+            $('.fade-in').each( function(i){
+                
+                let bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                let bottom_of_window = $(window).scrollTop() + $(window).height();
+                
+                /* If the object is completely visible in the window, fade it it */
+                if( bottom_of_window > bottom_of_object ){
+                    
+                    $(this).animate({'opacity':'1'},500);
+                        
+                }
+                
+            }); 
+        
+        });
+        
+    });
+
 
 
 
@@ -77,7 +101,7 @@ export default function Home (){
 
             <div className="main_content">
 
-                <section className='story container'>
+                <section className='story container fade-in'>
                     <h2>From 0 to 1</h2>
                     <div className='offset-2 col-8 border-top pt-4'>
 

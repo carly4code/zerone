@@ -1,5 +1,4 @@
 import React from 'react';
-import './styles/Access.scss';
 
 export default function Access (){
 

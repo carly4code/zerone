@@ -1,8 +1,5 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
-// import "bootstrap/dist/css/bootstrap.min.css";
-
-import "./styles/Header.scss"
 import { useState } from 'react';
 import { Fade } from 'react-reveal';
 
@@ -22,14 +19,10 @@ function Header() {
   return (
     <Fade top>
       <nav expand="lg" className="top-header">
-        {/* <nav expand="lg" className="d-flex align-items-center justify-content-between px-3 w-100"> */}
-        {/* <Navbar.Collapse> */}
-
         <a href="#">
           <div className={navbar ? 'logo1' : 'logo2'}></div>
         </a>
-        {/* <Navbar.Toggle /> */}
-
+  
         <div className="content">
           <div>
             83 Wellington Street, Central, Hong Kong
@@ -69,7 +62,6 @@ function Header() {
             </svg>
           </a>
         </div>
-        {/* </Navbar.Collapse> */}
       </nav>
     </Fade>
   );

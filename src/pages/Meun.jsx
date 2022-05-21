@@ -1,12 +1,6 @@
 import React from 'react';
 import meun_head from '../assets/images/Meun/meun_head.jpeg';
-import "./styles/Meun.scss";
 
-
-
-// import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, Move, MoveIn, MoveOut, Sticky, StickyIn, ZoomIn } from "react-scroll-motion";
-
-// import { Fade, Rotate, Bounce, Slide, Roll } from 'react-reveal';
 
 const MeunTitle = ({
     title,

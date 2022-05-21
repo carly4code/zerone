@@ -1,11 +1,10 @@
-// import logo from './logo.svg';
 import './reset.scss';
 import './App.scss';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home';
 import Access from './pages/Access';
 import Meun from './pages/Meun';
-// import { Routes, Route } from 'react-router';
+import Error from './pages/Error';
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Infinity from './elements/styles/Infinity.gif';
@@ -14,6 +13,11 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 
 function App() {
+
+
+  // useEffect(() => {
+
+  // },[])
   // const [loading, setLoading] = useState(false);
 
   //   useEffect(() => {
@@ -27,20 +31,12 @@ function App() {
     <BrowserRouter>
       <Header />
       <Sidebar />
-        {/* { loading ? (
-              <div className="loading-container">
-                <img src= {Infinity} className="loading" alt="loading"/>
-              </div>
-              ) : ( */}
-        
           <Routes>
               <Route path="/" element={<Home/>} />
               <Route path="/Access" element={<Access/>} />
               <Route path="/Meun" element={<Meun/>} />
+              <Route path="*" element = {<Error/>} />
           </Routes>
-      
-          {/* ) */}
-        {/* } */}
     </BrowserRouter>
   );
 }
