@@ -10,6 +10,7 @@ import Sidebar from "./components/Sidebar";
 import Infinity from './elements/styles/Infinity.gif';
 import React, { useState, useEffect } from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -37,7 +38,9 @@ function App() {
               <Route path="/Meun" element={<Meun/>} />
               <Route path="*" element = {<Error/>} />
           </Routes>
+          <Footer />
     </BrowserRouter>
+    
   );
 }
 

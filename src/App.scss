@@ -355,182 +355,243 @@ a {
         @include logoStyle();
         content: url("./assets/images/logo_full.png");
     }
-}
-
-/****/
 
 
-// Sidebar
+    @mixin icon($top) {
+        display: block;
+        background-color: #000;
+        height: 3px;
+        width: 16px;
+        top: $top;
+    }
 
-#left-header {
-    background-color: #f8f8f8;
-    height: 100%;
-    position: fixed;
-    z-index: 999999;
+    .mobile-menu-button {
+
+        .icon {
+            @include icon(0);
 
 
-    .navbar-left {
-        display: flex;
-        flex-direction: column;
-        padding: 3rem 1rem;
-        
-        ul{
-            
-            li{
-                writing-mode: vertical-rl;
-                transform: rotate(180deg)
+            &:before {
+                content: '';
+                position: relative;
+                @include icon(-8px);
+            }
+
+            &:after {
+                content: '';
+                position: relative;
+                @include icon(5px);
             }
         }
 
-        a {
-            padding: 3rem 0;
-            font-weight: 600;
-            font-size: 24px;
-            text-decoration: none;
-            color: #141414;
-            font-family: "Outfit", sans-serif;
+        &.clicked {
+            .icon {
+                transition-duration: 0.5s;
+                background: transparent;
 
-            &:hover {
-                color: darkgray;
+                &:before {
+                    transform: rotateZ(45deg) scale(1.4) translate(3.5px, 4px);
+                }
+
+                &:after {
+                    transform: rotateZ(-45deg) scale(1.4) translate(4px, -4.5px);
+                }
+            }
+        }
+
+        }
+
+        &.clicked {
+            .icon {
+                transition-duration: 0.2s;
+                background: transparent;
+
+                &:before {
+                    transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px);
+                }
+
+                &:after {
+                    transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
+                }
             }
         }
     }
-}
+
+    /**Header**/
 
 
+    // Sidebar
+
+    #left-header {
+        background-color: #f8f8f8;
+        height: 100%;
+        position: fixed;
+        z-index: 999999;
 
 
-
-
-//meun page end 
-.meun-wrapper {
-
-    .page-margin-wrapper {
-        padding-left: 140px;
-
-        .page-heading {
-            position: absolute;
-
-            h1 {
-                font-weight: 500;
-                font-size: 7vw;
-            }
-        }
-
-
-        .page-header {
-            margin-bottom: 80px;
+        .navbar-left {
             display: flex;
-            align-items: center;
-            position: relative;
+            flex-direction: column;
+            padding: 3rem 1rem;
 
-            img {
-                width: 100%;
-                object-fit: cover;
-                margin-left: 10rem;
-                max-height: 7rem;
+            ul {
+
+                li {
+                    writing-mode: vertical-rl;
+                    transform: rotate(180deg)
+                }
             }
-        }
 
-        .meun-table {
-            display: flex;
-            justify-content: space-between;
-            padding-bottom: 7rem;
-
-            .table-head {
-                font-size: 20px;
+            a {
+                padding: 3rem 0;
                 font-weight: 600;
-                padding: 1rem;
-            }
+                font-size: 24px;
+                text-decoration: none;
+                color: #141414;
+                font-family: "Outfit", sans-serif;
 
-            .table-body {
-                font-size: 16px;
-                font-weight: 400;
-                padding: 1rem;
-            }
-
-            .wide {
-                max-width: 60%;
+                &:hover {
+                    color: darkgray;
+                }
             }
         }
-
     }
-}
 
-//meun page scss end 
 
-//access page scss
-.access {
-    .main {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        width: 100%;
-        // padding-top: 10%;
-        padding-left: 8.33333333%;
 
-        h3 {
-            padding: 0;
-            font-size: 4vw;
-            margin: 0;
-        }
 
-        div {
-            width: 75%;
-            overflow: hidden;
-            position: relative;
-            padding-bottom: 35%;
-            margin: 0 2rem;
 
-            svg {
+
+    //meun page end 
+    .meun-wrapper {
+
+        .page-margin-wrapper {
+            padding-left: 140px;
+
+            .page-heading {
                 position: absolute;
-                width: 100%;
-                height: 817px;
-                left: 6%;
-                top: -10%;
+
+                h1 {
+                    font-weight: 500;
+                    font-size: 7vw;
+                }
             }
+
+
+            .page-header {
+                margin-bottom: 80px;
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    margin-left: 10rem;
+                    max-height: 7rem;
+                }
+            }
+
+            .meun-table {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 7rem;
+
+                .table-head {
+                    font-size: 20px;
+                    font-weight: 600;
+                    padding: 1rem;
+                }
+
+                .table-body {
+                    font-size: 16px;
+                    font-weight: 400;
+                    padding: 1rem;
+                }
+
+                .wide {
+                    max-width: 60%;
+                }
+            }
+
         }
+    }
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            width: 100%;
+    //meun page scss end 
+
+    //access page scss
+    .access {
+        .main {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+            // padding-top: 10%;
+            padding-left: 8.33333333%;
 
-            li {
-                width: 30%;
+            h3 {
+                padding: 0;
+                font-size: 4vw;
+                margin: 0;
+            }
 
-                a {
-                    text-decoration: none;
+            div {
+                width: 75%;
+                overflow: hidden;
+                position: relative;
+                padding-bottom: 35%;
+                margin: 0 2rem;
 
-                    &:hover {
-                        color: darkgrey;
+                svg {
+                    position: absolute;
+                    width: 100%;
+                    height: 817px;
+                    left: 6%;
+                    top: -10%;
+                }
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                li {
+                    width: 30%;
+
+                    a {
+                        text-decoration: none;
+
+                        &:hover {
+                            color: darkgrey;
+                        }
                     }
                 }
             }
         }
     }
-}
 
-//asscess scss end 
+    //asscess scss end 
 
-// error page scss 
-.error .wrapper {
-    h1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        font-family: 'Playfair Display', serif;
-        font-size: 80px;
-        font-weight: bold;
-        color: rgb(71, 71, 71);
+    // error page scss 
+    .error .wrapper {
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Playfair Display', serif;
+            font-size: 80px;
+            font-weight: bold;
+            color: rgb(71, 71, 71);
+        }
+
+        p {
+            height: 50vh;
+        }
     }
-    p {
-        height: 50vh;
-    }
-}
 
-// error page end
+    // error page end

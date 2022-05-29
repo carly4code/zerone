@@ -1,9 +1,52 @@
-import React from "react";
-import { Navbar } from "react-bootstrap";
-import { useState } from 'react';
+import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import { Fade } from 'react-reveal';
+import $ from 'jquery';
 
-function Header() {
+import useMediaQuery from "../hooks/useMediaQuery";
+
+
+$('.mobile-menu-button').click (function(){
+  $(this).toggleClass('clicked');
+});
+
+function MobileHeader() {
+  return (
+    <nav className="top-header">
+      <a href="#">
+        <div className={'logo2'}></div>
+      </a>
+      <div className="mobile-menu-button">
+      <div class="icon"></div>
+      {/* expended nav bar items */}
+      <div>
+        <ul>
+            <li>
+              <Link to="/" activeclassname="active">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/Access" activeclassname="active">
+                Access
+              </Link>
+            </li>
+            <li>
+              <Link to="/Meun" activeclassname="active">
+                Meun
+              </Link>
+            </li>
+          </ul>
+          </div>
+          {/* expended nav bar items */}
+      </div>
+    
+</nav>
+  );
+}
+
+function DesktopHeader() {
+  //-----change header logo while loading finished --------
   const [navbar, setNavbar] = useState(false);
 
   const changeIogo = () => {
@@ -15,9 +58,10 @@ function Header() {
   };
 
   window.addEventListener('scroll', changeIogo);
+  //-----change header logo while loading finished --------
+  
 
   return (
-    <Fade top>
       <nav expand="lg" className="top-header">
         <a href="#">
           <div className={navbar ? 'logo1' : 'logo2'}></div>
@@ -63,8 +107,22 @@ function Header() {
           </a>
         </div>
       </nav>
-    </Fade>
+
+  );
+}
+
+
+const Header = () => {
+  const isMobile = useMediaQuery('(max-width: 768px)');
+  return(
+  <Fade top>
+      {isMobile ? <MobileHeader /> : <DesktopHeader />}
+      </Fade>
   );
 }
 
 export default Header;
+
+
+
+
