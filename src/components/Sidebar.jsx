@@ -1,11 +1,18 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import Fade from 'react-reveal/Fade';
+
+import useMediaQuery from "../hooks/useMediaQuery";
+
 
 function Sidebar() {
+  const isMobile = useMediaQuery('(max-width: 768px)');
+
   return (
-    <Fade left>
-      <nav expand="lg" id="left-header" aria-controls="basic-navbar-nav">
+
+      <nav expand="lg" className={
+        isMobile ? "left-header hide" : "left-header"
+      }
+        aria-controls="basic-navbar-nav">
         <div className="navbar-left">
 
           <ul>
@@ -27,7 +34,7 @@ function Sidebar() {
           </ul>
         </div>
       </nav>
-    </Fade>
+
   );
 }
 
