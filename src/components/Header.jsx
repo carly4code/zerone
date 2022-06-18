@@ -3,22 +3,15 @@ import { Link } from 'react-router-dom';
 import $ from 'jquery';
 
 import useMediaQuery from "../hooks/useMediaQuery";
-{/* <div className="mobile-menu-button" onClick={() => {
-          setIsTranIcon(!isTranIcon)
-        }}>
-      <div className={
-          isTranIcon ? "icon clicked" : "icon"
-        }
-      onClick={() => {
-          setIsNavExpanded(!isNavExpanded)
-        }}></div> */}
 
-$('.icon').click(function () {
-  $(this).toggleClass('clicked');
-});
+
+{/* $(".icon").on("click", function(){
+          $(".icon").toggleClass("clicked");
+        }); */}
 
 function MobileHeader() {
-  const [isNavExpanded, setIsNavExpanded] = useState(false)
+  const [isTranIcon, setIsTranIcon] = useState(false);
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
 
 
   return (
@@ -27,16 +20,23 @@ function MobileHeader() {
         <div className={'logo2'}></div>
       </a>
       <div className="mobile-menu-button" onClick={() => {
-        setIsNavExpanded(!isNavExpanded)
+            setIsNavExpanded(!isNavExpanded)
+          }}>
+        <div className="icon-wrap" onClick={() => {
+        setIsTranIcon(!isTranIcon)
       }}>
-        <div className="icon"></div>
-        {/* expended nav bar items */}
         <div className={
-          isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
+          isTranIcon ? "icon clicked" : "icon"
         }>
-          <div>
+
+      </div>
+      </div>
+      {/* expended nav bar items */}
+      <div className={
+        isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
+      }>
+        <div>
           <div className="mobile-link">
-            
             <ul>
               <li>
                 <Link to="/" activeclassname="active">
@@ -87,21 +87,21 @@ function MobileHeader() {
                 </svg>
               </a>
             </div>
-
             <div className="content">
               <div>Mon - Fri | 07:30 - 19:00<br />
-              Sat - Sun | 08:30 - 19:00</div>
+                Sat - Sun | 08:30 - 19:00</div>
             </div>
             <div className="content">
-                83 Wellington Street, Central, Hong Kong
+              83 Wellington Street, Central, Hong Kong
             </div>
           </div>
-          </div>
+          
         </div>
-        {/* expended nav bar items */}
       </div>
+      {/* expended nav bar items */}
+    </div>
 
-    </nav>
+    </nav >
   );
 }
 
@@ -177,7 +177,7 @@ const Header = () => {
   return (
     <div>
       {isMobile ? <MobileHeader /> : <DesktopHeader />}
-      </div>
+    </div>
   );
 }
 

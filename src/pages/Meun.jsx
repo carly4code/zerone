@@ -25,24 +25,22 @@ export default function Meun() {
     return (
         <div className='meun-wrapper'>
             <div className="page-margin-wrapper">
-                <section className='top-column'>
+            <section className='top-column'>
+            <div className='page-header overflow-hidden'>
+                <img src={meun_head} alt='meun-img' />
+                <div className='page-heading'>
+                    <h1>
+                        Meun
+                    </h1>
+                </div>
+            </div>
 
-                        <div className='page-header overflow-hidden'>
-                            <img src={meun_head} alt='meun-img' />
-
-                            <div className='page-heading'>
-                                <h1>
-                                    Meun
-                                </h1>
-                            </div>
-                        </div>
-
-                </section>
+        </section>
 
                 <section className='meun-bar'>
                     <MeunTitle title="Drink" />
                     <div className="container meun-table">
-                        <div>
+                        <div className="drink-row one">
                             <div className="table-head">Coffee</div>
                             <div className="table-body">Espresso</div>
                             <div className="table-body">Macchiato</div>
@@ -50,9 +48,9 @@ export default function Meun() {
                             <div className="table-body">Piccolo</div>
                             <div className="table-body">Latte</div>
                             <div className="table-body">Cappuccino</div>
-                            <div className="table-body">Falt White</div>
+                            <div className="table-body">Flat White</div>
                         </div>
-                        <div>
+                        <div className="drink-row one">
                             <div className="table-head">Non-coffee</div>
                             <div className="table-body">Chai Latte</div>
                             <div className="table-body">Chocolate</div>
@@ -61,7 +59,7 @@ export default function Meun() {
                             <div className="table-body">Lamonade</div>
                             <div className="table-body">Sparkling</div>
                         </div>
-                        <div>
+                        <div className="drink-row">
                             <div className="table-head">Tea</div>
                             <div className="table-body">Assam</div>
                             <div className="table-body">Earl Grey</div>
