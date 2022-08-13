@@ -31,6 +31,11 @@ function Sidebar() {
                 Meun
               </Link>
             </li>
+            <li>
+              <Link to="/Shop" activeclassname="active">
+                Shop
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

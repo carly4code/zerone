@@ -4,11 +4,6 @@ import $ from 'jquery';
 
 import useMediaQuery from "../hooks/useMediaQuery";
 
-
-{/* $(".icon").on("click", function(){
-          $(".icon").toggleClass("clicked");
-        }); */}
-
 function MobileHeader() {
   const [isTranIcon, setIsTranIcon] = useState(false);
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -20,22 +15,22 @@ function MobileHeader() {
         <div className={'logo2'}></div>
       </a>
       <div className="mobile-menu-button" onClick={() => {
-            setIsNavExpanded(!isNavExpanded)
-          }}>
-        <div className="icon-wrap" onClick={() => {
+        setIsNavExpanded(!isNavExpanded);
         setIsTranIcon(!isTranIcon)
       }}>
-        <div className={
-          isTranIcon ? "icon clicked" : "icon"
-        }>
+        <div className="icon-wrap" onClick={() => {
+          setIsTranIcon(!isTranIcon)
+        }}>
+          <div className={
+            isTranIcon ? "icon clicked" : "icon"
+          }>
 
-      </div>
-      </div>
-      {/* expended nav bar items */}
-      <div className={
-        isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
-      }>
-        <div>
+          </div>
+        </div>
+        {/* expended nav bar items */}
+        <div className={
+          isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
+        }>
           <div className="mobile-link">
             <ul>
               <li>
@@ -95,11 +90,9 @@ function MobileHeader() {
               83 Wellington Street, Central, Hong Kong
             </div>
           </div>
-          
         </div>
+        {/* expended nav bar items */}
       </div>
-      {/* expended nav bar items */}
-    </div>
 
     </nav >
   );

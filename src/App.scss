@@ -1,7 +1,15 @@
 @import './assets/styles/_fonts.scss';
 
+$bg-red: #CC2840;
+
+@mixin center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 * {
-    font-family: $Outfit !important;
+    font-family: $Outfit  !important;
 }
 
 ::selection {
@@ -18,6 +26,7 @@ h3 {
     font-size: 4vw;
     color: $red;
 }
+
 
 //NOT YET DONE
 a {
@@ -215,7 +224,7 @@ a {
             color: black;
 
             span {
-                color: #CC2840;
+                color: $bg-red;
             }
         }
 
@@ -293,10 +302,11 @@ a {
     }
 
     .top-btn {
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        //display: flex;
+        // justify-content: center;
+        // align-items: center;
+        @include center-content;
 
         svg {
             height: 5vw;
@@ -385,20 +395,20 @@ a {
         }
 
         .clicked {
-                transition-duration: 0.5s;
-                background: transparent;
+            transition-duration: 0.5s;
+            background: transparent;
 
-                &:before {
+            &:before {
 
-                    transform: rotateZ(45deg) scale(1.4) translate(3.5px, 4px);
-                }
-
-                &:after {
-
-                    transform: rotateZ(-45deg) scale(1.4) translate(4px, -4.5px);
-                }
+                transform: rotateZ(45deg) scale(1.4) translate(3.5px, 4px);
             }
-        
+
+            &:after {
+
+                transform: rotateZ(-45deg) scale(1.4) translate(4px, -4.5px);
+            }
+        }
+
 
         .navigation-menu {
             transform: translateY(-100%);
@@ -408,55 +418,54 @@ a {
             bottom: 0;
             left: 0;
             right: 0;
-        }
 
-        .navigation-menu.expanded {
-            display: block;
-            height: 100vh;
-            background: #F8F8F8;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            right: 0;
-            transform: translateY(0);
 
-            .mobile-link {
-                padding-block: 20%;
-            }
+            .expanded {
+                display: block;
+                height: 100vh;
+                background: #F8F8F8;
+                width: 100%;
+                position: absolute;
+                transform: translateY(0);
 
-            ul {
-                display: flex;
-                flex-direction: column;
-                height: 100%;
-                justify-content: center;
-            }
-
-            li {
-                text-align: center;
-                font-size: 48px;
-                padding: 36px 0;
-
-                a {
-                    color: $red;
-                    text-decoration: none;
+                .mobile-link {
+                    padding-block: 10%;
+                    margin-top: 10%;
                 }
-            }
 
-            .mobile-content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    justify-content: center;
+                }
+
+                li {
+                    text-align: center;
+                    font-size: 48px;
+                    padding: 36px 0;
+
+                    a {
+                        color: $red;
+                        text-decoration: none;
+                    }
+                }
+
+                .mobile-content {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
             }
         }
     }
-
 }
 
 /**Header**/
 
 
 // Sidebar
-.left-header.hide {
+.hide {
     display: none;
 }
 
@@ -498,61 +507,60 @@ a {
 
 
 
+.page-margin-wrapper {
+    padding-left: 140px;
+}
 
-
-//meun page end 
+//meun page start
 .meun-wrapper {
 
-    .page-margin-wrapper {
-        padding-left: 140px;
+    .page-heading {
+        position: absolute;
 
-        .page-heading {
-            position: absolute;
-
-            h1 {
-                font-weight: 500;
-                font-size: 7vw;
-            }
+        h1 {
+            font-weight: 500;
+            font-size: 7vw;
         }
-
-
-        .page-header {
-            margin-bottom: 80px;
-            display: flex;
-            align-items: center;
-            position: relative;
-
-            img {
-                width: 100%;
-                object-fit: cover;
-                margin-left: 10rem;
-                max-height: 7rem;
-            }
-        }
-
-        .meun-table {
-            display: flex;
-            justify-content: space-between;
-            padding-bottom: 7rem;
-
-            .table-head {
-                font-size: 20px;
-                font-weight: 600;
-                padding: 1rem;
-            }
-
-            .table-body {
-                font-size: 16px;
-                font-weight: 400;
-                padding: 1rem;
-            }
-
-            .wide {
-                max-width: 60%;
-            }
-        }
-
     }
+
+
+    .page-header {
+        margin-bottom: 80px;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            margin-left: 10rem;
+            max-height: 7rem;
+        }
+    }
+
+    .meun-table {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 7rem;
+
+        .table-head {
+            font-size: 20px;
+            font-weight: 600;
+            padding: 1rem;
+        }
+
+        .table-body {
+            font-size: 16px;
+            font-weight: 400;
+            padding: 1rem;
+        }
+
+        .wide {
+            max-width: 60%;
+        }
+    }
+
+
 
     @media only screen and (max-width: 768px) {
         .page-margin-wrapper {
@@ -597,7 +605,7 @@ a {
 
 
 
-//meun page scss end 
+//meun page scss end
 
 //access page scss
 .access {
@@ -616,16 +624,17 @@ a {
         }
 
         .ms-auto {
-            width: 100%;
-            height: 50%;
+            width: auto;
+            height: 100%;
             overflow: hidden;
             position: relative;
             margin: 0 2rem;
+            max-height: 817px;
 
             svg {
                 position: absolute;
                 width: 100%;
-                max-height: 817px;
+                height: 100%;
                 left: 6%;
                 top: -10%;
             }
@@ -653,26 +662,137 @@ a {
         }
     }
 }
+
 @media only screen and (max-width: 768px) {
-    .access .main ul{
+    .access .main ul {
         display: flex;
-    flex-direction: column;
-    li{
-        padding-block:20px;
-        width: auto;
-    }
+        flex-direction: column;
+
+        li {
+            padding-block: 20px;
+            width: auto;
+        }
     }
 
 }
 
-//asscess scss end 
+//asscess scss end
 
-// error page scss 
+.shop-wrapper {
+    .shop-top-column {
+        padding-top: calc(3rem + 3rem);
+        // calc meun top paddinf + inner word padding
+    }
+
+    .awards img {
+        padding-right: 1.5rem;
+    }
+
+    .coffee-card {
+        @include center-content;
+        width: calc(100%/4);
+        height: 100%;
+        flex-direction: column;
+        gap: 10px;
+        .image-wrapper{
+            width: 200px;
+            height: 200px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        p{
+            text-align: center;
+        }
+    }
+
+    .product-row {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .quick-view {
+        @include center-content;
+        background-color: $bg-red;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 10px;
+        height: 38px;
+        opacity: 0;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.popup-wrap {
+position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+
+    .expanded {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 195px;
+        background: hsl(0deg 0% 100% / 71%);
+        transform: translateY(0);
+    }
+}
+
+.popup {
+    @include center-content;
+}
+
+.content-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 7rem;
+
+    img {
+        min-width: 330px;
+    }
+
+    .heading {
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 32px;
+        color: #464B49;
+    }
+
+    .subhead {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    button {
+        width: 143px;
+        height: 38px;
+        background: $bg-red;
+        color: #fff;
+        margin: 20px;
+        border: none;
+    }
+}
+
+
+// error page scss
 .error .wrapper {
     h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center-content;
         height: 100vh;
         font-family: 'Playfair Display', serif;
         font-size: 80px;
