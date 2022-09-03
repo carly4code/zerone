@@ -1,0 +1,8 @@
+https://www.pluralsight.com/guides/fetch-data-from-a-json-file-in-a-react-app
+https://www.youtube.com/watch?v=NM4gB8J1uF4&t=966s
+
+fetch api json in youtube reference
+https://www.youtube.com/watch?v=D-U0OkP5kwg&t=8s
+
+json-server --watch src/data/data.json --port 8000
+
