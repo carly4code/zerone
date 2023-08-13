@@ -13,8 +13,8 @@ import milk from '../assets/images/Home/milk.jpeg';
         let scroll = $(window).scrollTop();
         console.log(scroll)
         if(scroll > 636) {
-            $(".coffee .img-container img").css({  
-                transition: 'none',  
+            $(".coffee .img-container img").css({
+                transition: 'none',
                 transform: `translateX(-50%) scale(${ 1 + scroll / 1500}, ${1+ scroll / 1500})`
             })
         }
@@ -33,39 +33,39 @@ import milk from '../assets/images/Home/milk.jpeg';
 
             if(scroll > 1500) {
                 $(".coffee .img-container img").css({
-                
+
                     transform: `translateX(-50%) scale(${ 2}, ${2})`
                     // height: (100 + scroll/5) + "%"
                 })
             }
-            
 
-        })        
+
+        })
     })
 
     // fade-in function
     $(document).ready(function() {
-    
+
         /* Every time the window is scrolled ... */
         $(window).scroll( function(){
-        
+
             /* Check the location of each desired element */
             $('.fade-in').each( function(i){
-                
+
                 let bottom_of_object = $(this).offset().top + $(this).outerHeight();
                 let bottom_of_window = $(window).scrollTop() + $(window).height();
-                
+
                 /* If the object is completely visible in the window, fade it it */
                 if( bottom_of_window > bottom_of_object ){
-                    
+
                     $(this).animate({'opacity':'1'},500);
-                        
+
                 }
-                
-            }); 
-        
+
+            });
+
         });
-        
+
     });
 
 
@@ -84,15 +84,15 @@ export default function Home (){
                         Roastery
                     </h1>
 
-                    <p className='col-3'> 
-                        Established by and for coffee connoisseurs, 
+                    <p className='col-3'>
+                        Established by and for coffee connoisseurs,
                         we use direct-roasting method to fully extract the distinct flavour profiles unique to their origins into your cup.<br />
                         <a href='#'>FIND US</a>
                     </p>
                     <div className="col-8 offset-4 img-container">
                         <img src={hero} alt="hero"/>
                     </div>
-    
+
 
 
             </section>
@@ -113,7 +113,7 @@ export default function Home (){
                             <svg width="31" height="15" viewBox="0 0 31 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M23.0897 14.3697C21.1457 14.3 19.2813 13.5812 17.7946 12.3282C16.9831 11.7349 16.2152 11.0845 15.4966 10.3818C15.2212 10.1068 15.0518 10.0962 14.7659 10.3818C13.757 11.3759 12.65 12.2655 11.4617 13.0369C10.0386 14.054 8.30116 14.5355 6.55683 14.3961C4.8125 14.2567 3.17376 13.5054 1.93064 12.2753C1.04619 11.4186 0.430164 10.3236 0.157532 9.1235C-0.115099 7.92343 -0.0325687 6.67007 0.395073 5.516C0.757627 4.33784 1.44781 3.28681 2.38525 2.48529C3.32269 1.68377 4.4688 1.16475 5.69013 0.988668C8.25294 0.491508 10.3921 1.47525 12.3725 2.95615C13.2165 3.56917 14.0163 4.24076 14.7659 4.96595C15.02 5.19867 15.1577 5.19867 15.4119 4.96595C16.4422 3.96316 17.5624 3.05672 18.7583 2.25801C20.1004 1.28688 21.732 0.798035 23.3875 0.87102C25.0431 0.944004 26.6253 1.57453 27.8764 2.65997C28.8705 3.49184 29.586 4.60764 29.9268 5.85751C30.2675 7.10738 30.2172 8.43147 29.7826 9.65196C29.4297 10.8731 28.7259 11.9639 27.7583 12.7893C26.7908 13.6148 25.602 14.1385 24.3393 14.2956C24.1205 14.338 23.8981 14.3697 23.6721 14.3908C23.4778 14.3933 23.2834 14.3863 23.0897 14.3697ZM7.20452 4.3207C6.70857 4.27857 6.20944 4.34677 5.74304 4.5204C5.27665 4.69402 4.85458 4.96876 4.50721 5.32483C4.15984 5.6809 3.89581 6.10945 3.73412 6.57965C3.57243 7.04985 3.5171 7.55 3.57211 8.04412C3.66826 8.57423 3.88451 9.07536 4.20433 9.50918C4.52415 9.943 4.93905 10.298 5.41732 10.5471C5.89559 10.7961 6.42455 10.9327 6.96374 10.9462C7.50294 10.9597 8.0381 10.8499 8.52828 10.6251C9.94927 9.92659 11.2418 8.99317 12.3513 7.86429C12.5843 7.65274 12.4678 7.53638 12.3513 7.37771C11.5471 6.60565 10.6831 5.89826 9.76732 5.26213C9.02664 4.72131 8.15071 4.39551 7.23629 4.3207H7.20452ZM26.6056 7.7162C26.6026 7.14004 26.4546 6.57388 26.1753 6.06975C25.896 5.56562 25.4943 5.13969 25.0072 4.83111C24.5201 4.52253 23.9631 4.34119 23.3875 4.30376C22.8119 4.26632 22.236 4.37399 21.713 4.61688C20.2735 5.32355 18.966 6.27168 17.8476 7.42002C17.6781 7.56811 17.6464 7.68447 17.8476 7.85371C18.9725 8.99359 20.2832 9.93431 21.7236 10.6357C22.234 10.8779 22.7962 10.9909 23.3607 10.9646C23.9252 10.9384 24.4745 10.7737 24.9601 10.4852C25.4458 10.1966 25.8528 9.79308 26.1454 9.31016C26.4379 8.82724 26.6069 8.27981 26.6374 7.7162H26.6056Z" fill="#CC2840"/>
                             </svg>
-                            &nbsp;sign in between) not only represent our infinitive passion for coffee, but also our story. We want to open our own coffee shop and let Hong Kong to try quality specialty coffee with distinct flavor profiles unique to their origins and appreciate the beauty of this centuries-old beverage. 
+                            &nbsp;sign in between) not only represent our infinitive passion for coffee, but also our story. We want to open our own coffee shop and let Hong Kong to try quality specialty coffee with distinct flavor profiles unique to their origins and appreciate the beauty of this centuries-old beverage.
                         </p>
                     </div>
                 </section>
@@ -156,7 +156,7 @@ export default function Home (){
                         <img src={hero} alt="" />
                     </div>
                 </section>
-                
+
                 <section className='ig'>
                     <h2>Latest Feeds</h2>
                     {/* insta-feeds */}
@@ -193,9 +193,6 @@ export default function Home (){
                     </div>
                 </section>
             </div>
-
-            <Footer />
-
         </div>
 
     )
