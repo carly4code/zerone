@@ -16,7 +16,7 @@ function Shop() {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "space-between",
-                        paddingLeft: "0",
+                        padding: "0 30px",
                     }}>
                         <p
                             style={{

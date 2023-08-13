@@ -36,6 +36,7 @@ function Sidebar() {
                 Shop
               </Link>
             </li>
+
           </ul>
         </div>
       </nav>

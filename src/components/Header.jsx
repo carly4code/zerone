@@ -48,6 +48,11 @@ function MobileHeader() {
                   Meun
                 </Link>
               </li>
+              <li>
+                <Link to="/Shop" activeclassname="active">
+                  Shop
+                </Link>
+              </li>
             </ul>
           </div>
 
