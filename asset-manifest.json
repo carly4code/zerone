@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/carly4code/zerone.git/static/css/main.f8e24fb4.css",
+    "main.js": "/carly4code/zerone.git/static/js/main.39075e83.js",
+    "static/js/787.6924f6aa.chunk.js": "/carly4code/zerone.git/static/js/787.6924f6aa.chunk.js",
+    "static/media/hero.jpg": "/carly4code/zerone.git/static/media/hero.8dd1b0f03723d1efe0be.jpg",
+    "static/media/dummy-product.svg": "/carly4code/zerone.git/static/media/dummy-product.00ddd04d65fcfd3d12780f7fdd52bc5c.svg",
+    "static/media/Infinity.gif": "/carly4code/zerone.git/static/media/Infinity.6b4f99002a5f47dab5a3.gif",
+    "static/media/award1.svg": "/carly4code/zerone.git/static/media/award1.efed78e67157c1ea6a0811f8a152918b.svg",
+    "static/media/award2.svg": "/carly4code/zerone.git/static/media/award2.701fe32c8674be6902742f135ced54ed.svg",
+    "static/media/meun_head.jpeg": "/carly4code/zerone.git/static/media/meun_head.6789e69c4f44425f735c.jpeg",
+    "static/media/milk.jpeg": "/carly4code/zerone.git/static/media/milk.8012b3a97a03e800e497.jpeg",
+    "static/media/logo_full.png": "/carly4code/zerone.git/static/media/logo_full.dcb9ff510d3fad8ad5d3.png",
+    "static/media/zeroone_logo.png": "/carly4code/zerone.git/static/media/zeroone_logo.c81d587c857097dba585.png",
+    "static/media/error.svg": "/carly4code/zerone.git/static/media/error.515d172798175ff25a983ab25bfed243.svg",
+    "index.html": "/carly4code/zerone.git/index.html",
+    "main.f8e24fb4.css.map": "/carly4code/zerone.git/static/css/main.f8e24fb4.css.map",
+    "main.39075e83.js.map": "/carly4code/zerone.git/static/js/main.39075e83.js.map",
+    "787.6924f6aa.chunk.js.map": "/carly4code/zerone.git/static/js/787.6924f6aa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8e24fb4.css",
+    "static/js/main.39075e83.js"
+  ]
+}
