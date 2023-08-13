@@ -103,7 +103,11 @@ export default function Home (){
 
                 <section className='story container fade-in'>
                     <h2>From 0 to 1</h2>
-                    <div className='offset-2 col-8 border-top pt-4'>
+                    <div style={{
+                            width: '80%',
+                            textAlign: 'center',
+                            margin: '0 auto'
+                    }}>
 
                         <p>
                             We are simply a group of young people from Hong Kong, Taiwan, and China who were brought together by the same passion for coffee. Taking the first step is always the hardest, but we let our butterflies moved us forward and led us to new opportunities.
