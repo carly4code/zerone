@@ -14,7 +14,7 @@ import Product from "./pages/Product";
 
 import Infinity from './elements/styles/Infinity.gif';
 import React, { useState, useEffect } from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes,  HashRouter as Route} from 'react-router-dom';
 import Footer from './components/Footer';
 
 
