@@ -1,8 +1,8 @@
 {
   "name": "zeroone",
   "version": "0.1.0",
-  "homepage": "https://github.com/carly4code/zerone.git",
-  "private": false,
+  "homepage": ".",
+  "private": ture,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
